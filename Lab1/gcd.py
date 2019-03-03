@@ -1,19 +1,15 @@
 class Gcd:
-    a = 0
-    b = 0
-    temp = 0
+    def rem(self, a, b):
+        return a % b
 
-    def __init__(self, a, b):
-        self.a = a
-        self.b = b
+    def result(self, a, b):
+        print("a", a)
+        print("b", b)
+        if (self.rem(a, b)) == 0:
+            return b
 
-    def rem(self):
-        self.temp = self.a % self.b
-        return self.temp
+        elif (self.rem(a, b)) == 1:
+            return 1
 
-    def set_ab(self, a, b):
-        self.a = a
-        self.b = b
-
-
-
+        else:
+            return self.result(b, self.rem(a, b))
