@@ -1,10 +1,47 @@
 from gcd import *
 
+
 s = Gcd()
-print("answer", s.result(259, 70))
-print("------------")
-print("answer", s.result(1147, 899))
-print("------------")
-print("answer", s.result(3, 2))
-print("------------")
 print("answer", s.result(1914, 899))
+print("a", s.at)
+print("b", s.bt)
+s.egcd()
+print("s", s.s)
+print("t", s.t)
+print("q", s.q)
+w = len(s.q)-2
+j = len(s.q)-1
+print(((s.q[0]+s.q[w])*s.q[j])+ s.q[0])
+z = []
+y = []
+z.append(1)
+y.append(s.q[0])
+
+for i in range(1, len(s.q)):
+    c = i - 1
+    z.append(y[c])
+    y.append((z[i]*s.q[i])+z[c])
+
+print(y)
+print(z)
+print("------------")
+s = Gcd()
+print("answer", s.result(93, 219))
+print("a", s.at)
+print("b", s.bt)
+s.egcd()
+print("s", s.s)
+print("t", s.t)
+print("q", s.q)
+z = []
+y = []
+z.append(1)
+y.append(s.q[0])
+
+for i in range(1, len(s.q)):
+    c = i - 1
+    z.append(y[c])
+    y.append((z[i]*s.q[i])+z[c])
+
+print(y)
+print(z)
