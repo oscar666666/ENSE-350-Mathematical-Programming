@@ -45,3 +45,10 @@ for i in range(1, len(s.q)):
 
 print(y)
 print(z)
+
+print("------------")
+numerator = input("enter numerator plz")
+denumerator = input("enter denumerator plz")
+s = Gcd()
+print("answer", s.result(int(numerator), int(denumerator)))
+print("fraction output", int(numerator) / s.result(int(numerator), int(denumerator)), "/", int(denumerator) / s.result(int(numerator), int(denumerator)))
