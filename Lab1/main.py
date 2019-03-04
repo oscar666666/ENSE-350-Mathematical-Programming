@@ -9,21 +9,10 @@ s.egcd()
 print("s", s.s)
 print("t", s.t)
 print("q", s.q)
-w = len(s.q)-2
-j = len(s.q)-1
-print(((s.q[0]+s.q[w])*s.q[j])+ s.q[0])
-z = []
-y = []
-z.append(1)
-y.append(s.q[0])
-
-for i in range(1, len(s.q)):
-    c = i - 1
-    z.append(y[c])
-    y.append((z[i]*s.q[i])+z[c])
-
-print(y)
-print(z)
+s.egcdresult()
+n = len(s.y) - 1
+print("t = -", s.y[n])
+print("s = ", s.z[n])
 print("------------")
 s = Gcd()
 print("answer", s.result(135, 59))
@@ -33,18 +22,10 @@ s.egcd()
 print("s", s.s)
 print("t", s.t)
 print("q", s.q)
-z = []
-y = []
-z.append(1)
-y.append(s.q[0])
 
-for i in range(1, len(s.q)):
-    c = i - 1
-    z.append(y[c])
-    y.append((z[i]*s.q[i])+z[c])
-
-print(y)
-print(z)
+s.egcdresult()
+print("t = -", s.y[n])
+print("s = ", s.z[n])
 
 print("------------")
 numerator = input("enter numerator plz")
