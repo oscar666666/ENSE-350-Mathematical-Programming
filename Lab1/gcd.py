@@ -17,6 +17,8 @@ class Gcd:
             return b
 
         elif (self.rem(a, b)) == 1:
+            self.at.append(b)
+            self.bt.append(1)
             return 1
 
         else:
