@@ -1,0 +1,44 @@
+how this program work?
+
+This program is written using python3.
+the first two parts will calculate gcd and extended gcd. 
+# this two parts won't take user input, please change values in function (main.py)
+the third part will take two values from keyboard and output in lowest fraction.
+q1:
+The program takes two values and calculate gcd by using recursive method.
+gcd(a, b)= gcd(b, rem(a, b))
+
+q2:
+this program will calculate pulverizer method.
+we store all a values and b values in two arrays.
+ex: a[1914, 899, 116, 87]
+    b[899, 166, 87, 29]
+m = max array length
+we find every step can be written as
+b[m] = a[m-1-i] -a[m-i][(a[m-i-1]-b[m-i]/b[m-i-1]]
+
+therefore we can get 3 set of values s, t, and q
+s = a[m-1-i]
+t = a[m-i]
+q = [(a[m-i-1]-b[m-i]/b[m-i-1]]
+
+ex: s[116, -889, 1914]
+    t[-87, 116, -899]
+    q[1, 7, 2]
+
+finally, we calculate final s(z) and final t(y):
+z[0] always be 1
+y[0] is q[0]
+
+z[i+1] = y[i]
+y[i+1] = z[i+1]xq[i+1] + z[i]
+
+ex:  z[1, 1, 8]
+     y[1, 1x7+1, 8x2+1]
+
+the final s = 8 and t = -17
+
+q3:
+we take user input display lowest fraction.
+we calculate gcd first
+and the we devide both numerator and denominator by gcd value.
