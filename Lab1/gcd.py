@@ -39,7 +39,6 @@ class Gcd:
             self.q.append(int((self.at[n-i] - self.bt[m-i]) / self.bt[n-i]))
 
     def egcdresult(self):
-        self.egcd()
         self.z.append(1)
         self.y.append(self.q[0])
 
