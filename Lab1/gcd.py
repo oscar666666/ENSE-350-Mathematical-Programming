@@ -46,3 +46,12 @@ class Gcd:
             c = i - 1
             self.z.append(self.y[c])
             self.y.append((self.z[i] * self.q[i]) + self.z[c])
+
+        for i in range(0, len(self.z)):
+            #c = i -1
+            if i == 0:
+                self.y[i] = self.y[i]*(-1)
+            elif (i%2)==1:
+                self.z[i] = self.z[i]*(-1)
+            elif (i%2)==0:
+                self.y[i] = self.y[i]*(-1)
