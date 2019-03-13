@@ -1,0 +1,14 @@
+how this program work?
+
+This program is written using python3.
+
+p $ q are two prime numbers declared in main
+n = p * q
+phi(n) = (p - 1)*(q - 1)
+I'm using a while loop to generate e
+so gcd(e, phi(n)) == 1
+I'm using this algorithm to calculate d
+int(((2*self.phi)+1)/self.e)
+
+For encoding I just simply calculate c = rem(m^e, n)
+for decoding I just simply calculate rem(c^d, n)

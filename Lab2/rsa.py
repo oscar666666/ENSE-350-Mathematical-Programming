@@ -41,8 +41,7 @@ class Rsa:
 
     def Decoding(self, c):
         gcd1 = Gcd()
-        print("n= ", self.n)
         #print(self.fastPower(self, c, self.d, self.n))
-        return gcd1.rem(c**self.d, self.n)
+        return gcd1.rem(int(c**self.d), self.n)
 #self.fastPower(self, c, self.d, self.n)
             #gcd1.rem(c**self.d, self.n)
