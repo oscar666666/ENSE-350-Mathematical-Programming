@@ -28,11 +28,14 @@ class Rsa:
 
     def calculateD(self, phi):
         gcd = Gcd()
-        gcd.result(self.calculateE(), phi)
+        gcd.result(self.e, phi)
+        gcd.egcd()
         gcd.egcdresult()
-        gcd.getS()
-        self.d = int(((2*self.phi)+1)/self.e)
-        return int(((2*self.phi)+1)/self.e)
+
+
+        #self.d = int(((2*self.phi)+1)/self.e)
+        self.d = gcd.z[len(gcd.z)-1]
+        return gcd.z[len(gcd.z)-1]
 
     def Encoding(self, m):
         gcd = Gcd()
@@ -42,6 +45,10 @@ class Rsa:
     def Decoding(self, c):
         gcd1 = Gcd()
         #print(self.fastPower(self, c, self.d, self.n))
-        return gcd1.rem(int(c**self.d), self.n)
+        e =(c**self.d)% self.n
+        print("dc", c)
+        print("dd", self.d)
+        print("dn", self.n)
+        return e
 #self.fastPower(self, c, self.d, self.n)
             #gcd1.rem(c**self.d, self.n)

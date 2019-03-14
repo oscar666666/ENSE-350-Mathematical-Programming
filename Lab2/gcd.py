@@ -1,5 +1,7 @@
 class Gcd:
-    s = 0
+    gcd = 0
+    sf = 0
+    tf = 0
     def __init__(self):
         self.at = []
         self.bt = []
@@ -37,7 +39,6 @@ class Gcd:
             self.q.append(int((self.at[n-i] - self.bt[m-i]) / self.bt[n-i]))
 
     def egcdresult(self):
-        self.egcd()
         self.z.append(1)
         self.y.append(self.q[0])
 
@@ -45,8 +46,12 @@ class Gcd:
             c = i - 1
             self.z.append(self.y[c])
             self.y.append((self.z[i] * self.q[i]) + self.z[c])
-        n = len(self.z) - 1
-        self.s = self.z[n]
 
-    def getS(self):
-        return self.s
+        for i in range(0, len(self.z)):
+            #c = i -1
+            if i == 0:
+                self.y[i] = self.y[i]*(-1)
+            elif (i%2)==1:
+                self.z[i] = self.z[i]*(-1)
+            elif (i%2)==0:
+                self.y[i] = self.y[i]*(-1)
