@@ -2,22 +2,20 @@ from gcd import *
 from rsa import *
 
 rsa = Rsa()
-rsa._init_(53, 59)
+rsa._init_(53,59)
 
 print("n = ", rsa.calculateN())
 print("phi = ", rsa.calculatephin())
-print("e = ", rsa.calculateE())
-print("d = ", rsa.calculateD(rsa.calculatephin()))
-m = 89
+e = rsa.calculateE(rsa.calculatephin())
+print("e = ", e)
+d = rsa.calculateD(e ,rsa.calculatephin())
+print("d = ", d)
+m = 123
 print("m = ", m)
-print("Encoding c = ", rsa.Encoding(m))
-c = rsa.Encoding(m)
-print("Decoding m = ", rsa.Decoding(c))
-k = rsa.Decoding(c)
+
+c = rsa.Encoding(e ,rsa.calculateN(), m)
+print("Encoding c = ", c)
+if(d<0):
+    d = d*(-1)
+print("Decoding m = ", rsa.Decoding(c, d, rsa.calculateN()))
 print("--------------------")
-gcd = Gcd()
-gcd.result(3, 3016)
-gcd.egcd()
-gcd.egcdresult()
-print(gcd.z)
-print(gcd.y)
