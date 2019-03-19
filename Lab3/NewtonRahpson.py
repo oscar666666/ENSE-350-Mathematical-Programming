@@ -11,3 +11,8 @@ class NewtonRahpson:
     def Dfunction(self, x):
         return ((-1)*(1/(4* math.pi*self.e0))*((self.q*self.q*((2*x**2) - self.r**2))/((x**2)+(self.r**2))**(5/2)))-self.f
 
+    def CalculateX(self, x):
+        while abs(self.Function(x) / self.Dfunction(x)) >= 0.0001:
+            x = x - (self.Function(x) / self.Dfunction(x))
+            print("x = ", x)
+
