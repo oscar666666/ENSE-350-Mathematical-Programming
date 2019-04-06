@@ -10,4 +10,5 @@ B = [[1, 1, 1],
      [1, 1, 1]]
 
 lud = LuDecomposition()
-print(lud.GaussianElimination(A))
+print("U", lud.GaussianElimination(A))
+#lud.GaussianElimination(A)
