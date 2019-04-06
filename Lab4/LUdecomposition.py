@@ -7,11 +7,13 @@ class LuDecomposition:
         temp = np.zeros((3, 3))
         temp[0]=A[0]
         t=0
-        for i in range(t, 10):
-            for row in range(len(A)):
+        for i in range(len(A)-1):
+            for row in range(t, len(A)):
                 for column in range(len(A[0])):
-                    if(row>0):
-                        temp[row][column] = A[row][column] - ((A[row][0]/A[0][0])*A[0][column])
+                    if(row>t):
+                        temp[row][column] = A[row][column] - ((A[row][t]/A[0][0])*A[0][column])
+            print(temp)
+            t=t+1
         return(temp)
 
 
