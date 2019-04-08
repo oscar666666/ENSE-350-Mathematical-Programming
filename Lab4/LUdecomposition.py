@@ -41,7 +41,7 @@ class LuDecomposition:
                             if(L[row][column]==0):
                                 L[row][column] = temp[row][column]/temp[row-t3][column]
                         temp[row][column] = temp[row][column] - ((t0)*temp[t][column])
-                print("temp",temp)
+                #print("temp",temp)
             t = t + 1
 
         return(L)

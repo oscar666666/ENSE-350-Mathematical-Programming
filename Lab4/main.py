@@ -17,7 +17,8 @@ L2 =[[1, 0, 0],
 lud = LuDecomposition()
 print("U", lud.GaussianElimination(A))
 print("A", A2)
-print("L", lud.FindL(A2, L2))
+print("L", lud.FindL(A2, L))
+
 #print("L", np.divide(A2,A))
-#print("LU",np.multiply(np.divide(lud.GaussianElimination(A), B),lud.GaussianElimination(A)))
+print("LU",np.dot(L,A))
 #lud.GaussianElimination(A)
