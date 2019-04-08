@@ -15,10 +15,32 @@ class LuDecomposition:
                     if(row>t):
                         #print("row ", row, "---column", column, "temp",temp[row][t]/temp[t][t] )
                         temp[row][column] = temp[row][column] - ((t0)*temp[t][column])
-                        #print(temp[row])
+                        #if(temp[row][column]==0):
+                            #temp[row][column] = np.nan
+                            #print(temp[row])
             #print(temp)
             t=t+1
         return(temp)
 
+    def FindL(self, A, L):
+        #temp = np.zeros((3, 3))
+        temp=A
+        t=0
+        for i in range(len(A)-1):
 
+            for row in range(t, len(A)):
+
+                t0 = temp[row][t] / temp[t][t]
+
+                for column in range(len(A[0])):
+                    if(row>t):
+                        #print("row ", row, "---column", column, "temp",temp[row][t]/temp[t][t] )
+                        #L[row][column] = temp[row][column] / temp[row-1][column]
+                        if(temp[row][column] - ((t0)*temp[t][column])==0):
+                            L[row][column] = temp[row][column]/temp[row-1][column]
+                        temp[row][column] = temp[row][column] - ((t0)*temp[t][column])
+                print("temp",temp)
+
+            t=t+1
+        return(L)
 
