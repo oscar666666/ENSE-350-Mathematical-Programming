@@ -1,0 +1,11 @@
+import numpy as np
+x = np.array([[4, 2], [3, -1]])
+y = np.linalg.inv(x)
+a = np.array([-5, -3])
+z = np.dot(y,a)
+c = np.array([1, 1])
+f = np.subtract(c,z)
+print(x)
+print(y)
+print("--------")
+print(f)
