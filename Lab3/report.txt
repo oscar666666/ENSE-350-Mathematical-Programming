@@ -1,0 +1,7 @@
+This is lab 3
+
+Bisection.py contains all functions to calculate root via bisection method
+NewtonRahpson.py contains all functions to calculate root via newtonrahpson method
+Secant.py contains all functions to calculate root via secant method
+
+

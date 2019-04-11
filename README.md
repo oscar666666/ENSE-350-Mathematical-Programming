@@ -1,6 +1,17 @@
-# ENSE_350_Mathematical_Programming
-How my programs work
+# ENSE 350 Mathematical Programming
 
 
-Lab1
-[a link](https://github.com/oscar666666/ENSE_350_Mathematical_Programming/blob/master/Lab1/report.txt)
+##Lab 1 
+####**_Recursively Euclidean algorithm & Pulverizer_**
+
+##Lab 2 
+####**_The RSA Cryptosystem_**
+
+##Lab 3 
+####**_Newton-Raphson method, The Bisection method & The Secant method_**
+
+##Lab 4 
+####**_LU Decomposition_**
+
+##Lab 5 
+####**_Multiple-equation Newton-Raphson Method_**
