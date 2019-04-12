@@ -1,11 +1,15 @@
-import numpy as np
-x = np.array([[4, 2], [3, -1]])
-y = np.linalg.inv(x)
-a = np.array([-5, -3])
-z = np.dot(y,a)
-c = np.array([1, 1])
-f = np.subtract(c,z)
-print(x)
-print(y)
+from MultipleNewtonRaphson import *
+mnr = MNR()
+x = 1.5
+y = 3.5
+c = np.array([x, y])
+
+j = mnr.Jacobian(x, y)
+a = mnr.f1f2Matrix(x, y)
+z = mnr.MultiplyMatrix(mnr.CalculateInverse(j),a)
+f = mnr.SubtractMatrix(c, z)
+print(j)
+print(a)
+print(z)
 print("--------")
 print(f)
