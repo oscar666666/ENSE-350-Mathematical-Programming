@@ -3,7 +3,7 @@ mnr = MNR()
 x = 1.5
 y = 3.5
 
-while((abs(mnr.f1(x, y))+abs(mnr.f2(x,y)))>0.2):
+while((abs(mnr.f1(x, y))+abs(mnr.f2(x,y)))>0.01):
     c = np.array([x, y])
     j = mnr.Jacobian(x, y)
     a = mnr.f1f2Matrix(x, y)
@@ -16,5 +16,3 @@ while((abs(mnr.f1(x, y))+abs(mnr.f2(x,y)))>0.2):
     print(z)
     print("--------")
     print(f)
-    print(x)
-    print(y)
