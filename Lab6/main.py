@@ -9,4 +9,6 @@ plt.ylabel('f(x)')
 plt.title('Trapezoidal')
 plt.show()
 
-
+print(tp.deltax(-10, 10, 6))
+print(tp.CalculateTrapezoidal(-10, 10, 6))
+print(tp.deltax(-10, 10, 6))
