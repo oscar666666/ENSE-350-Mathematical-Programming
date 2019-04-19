@@ -14,3 +14,8 @@
 
 ## Lab 5 
 #### **_Multiple-equation Newton-Raphson Method_**
+
+## Lab 6 
+#### **_Multiple Segment Trapezoidal Rule_**
+
+
